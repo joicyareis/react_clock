@@ -16,7 +16,7 @@ export class Clock extends React.Component<Props> {
       this.setState({
         today: new Date(),
       });
-// eslint-disable-next-line no-console
+      // eslint-disable-next-line no-console
       console.log(new Date().toUTCString().slice(-12, -4));
     }, 1000);
   }
@@ -24,9 +24,7 @@ export class Clock extends React.Component<Props> {
   componentDidUpdate(prevProps: Props) {
     if (prevProps.name !== this.props.name) {
       // eslint-disable-next-line no-console
-      console.warn(
-        `Clock name changed from ${prevProps.name} to ${this.props.name}`,
-      );
+      console.warn(`Renamed from ${prevProps.name} to ${this.props.name}`);
     }
   }
 
